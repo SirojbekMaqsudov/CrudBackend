@@ -26,5 +26,5 @@ const {ErrorMiddleware} = require("./Middlewares/ErrorMiddleware");
 app.use(ErrorMiddleware)
 
 app.listen(PORT, () => {
-    console.log(`Server has been started on port 🚀${PORT}`)
+    console.log(`Server has been started on port ${PORT}`)
 })

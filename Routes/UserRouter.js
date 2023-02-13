@@ -6,6 +6,7 @@ const router = new Router()
 
 router.get('/', checkRole('ADMIN'), UserController.getAll)
 router.get('/getMe', AuthMiddleware, UserController.getMe)
+router.get('/refresh', AuthMiddleware, UserController.refreshToken)
 router.get('/:id', UserController.getOne)
 router.post('/createUser', checkRole('ADMIN'), UserController.createUser)
 router.post('/login', UserController.loginUser)

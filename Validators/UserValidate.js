@@ -12,7 +12,7 @@ const UserSchema = Joi.object({
 const UserUpdateSchema = Joi.object({
     name: Joi.string().min(3).max(30),
     email: Joi.string().email(),
-    password: Joi.string().min(4).max(16),
+    password: Joi.string().min(4).max(100),
     phone_number: Joi.string().min(9).max(18),
     role: Joi.string().valid(...Roles)
 })
